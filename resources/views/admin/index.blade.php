@@ -55,13 +55,15 @@
                     </table>
                 </div>
             </div>
-            <div class="right_info flex-1 p-15 bg-gray-50 shadow-md sm:rounded-lg">
-
+            <div class="right_info  flex-1 p-15 bg-gray-50 overflow-x-auto shadow-md sm:rounded-lg">
+                <div class="bg-red-50">
+                    Profile
+                </div>
             </div>
         </div>
         {{-- projects table starts from here --}}
-        <div class="projects_section flex items-center justify-center m-5">
-            <div class="pro-table relative overflow-x-auto shadow-md sm:rounded-lg w-full">
+        <div class="projects_section items-center justify-center m-5">
+            <div class="pro-table relative overflow-x-auto shadow-md sm:rounded-lg w-fulld">
 
                 {{-- <button class="bg-blue-500 float-right text-white py-2 px-4 rounded-md my-4">
                     <a href="#">
@@ -77,12 +79,6 @@
                             <th scope="col" class="px-6 py-3">
                                 dropdown
                             </th>
-                            {{-- <th scope="col" class="px-6 py-3">
-                                Color
-                            </th> --}}
-                            {{-- <th scope="col" class="px-6 py-3">
-                                Category
-                            </th> --}}
                             <th scope="col" class="px-6 py-3">
                                 Price
                             </th>
@@ -112,13 +108,13 @@
                                     <button
                                         class="inline text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                         type="button">
-                                        Edit
+                                        Trash
                                     </button></a>
 
                                 <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" data-id="1"
-                                    class="delBtn inline text-white bg-red-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    class="delBtn inline text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">
-                                    Delete
+                                    Completed
                                 </button>
                             </td>
                         </tr>

@@ -16,6 +16,19 @@
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
                     value="{{ $item->title }}" />
             </div>
+            <div class="input_container flex">
+                <div class="flex-1">
+                    <label for="company" class="inline-block text-lg mb-2">Title</label>
+                    <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
+                        value="{{ $item->title }}" />
+                </div>
+                <div class="flex-1">
+                    <label for="company" class="inline-block text-lg mb-2">Title</label>
+                    <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title"
+                        value="{{ $item->title }}" />
+                </div>
+
+            </div>
             <div class="mb-6">
                 <label for="subtitle" class="inline-block text-lg mb-2">Price</label>
                 <input type="text" class="border border-gray-200 rounded p-2 w-full" name="price"
@@ -33,15 +46,7 @@
                 <textarea id="description" class="border border-gray-200 rounded p-2 w-full" name="description">{{ $item->description }}</textarea>
             </div>
             <div class="mb-6">
-                {{-- <label for="cars">Choose a Project:</label> --}}
 
-                {{-- <select class="border border-gray-200 rounded my-2 p-2 w-full" id="cars" name="project_id">
-                    @foreach ($projects as $item)
-                        <option value="{{ $item->id }}">
-                            {{ $item->name }}
-                        </option>
-                    @endforeach
-                </select> --}}
             </div>
             <div class="mb-6">
                 <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">

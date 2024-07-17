@@ -15,7 +15,11 @@ Route::get('/addPro', [ProductController::class, 'addProduct'])->name('admin.add
 Route::post('/createPro', [ProductController::class, 'createProduct'])->name('admin.createPro');
 Route::get('/editPro/{id}', [ProductController::class, 'editProduct'])->name('admin.editPro');
 Route::post('/updatePro', [ProductController::class, 'updateProduct'])->name('admin.updatePro');
-Route::post('/deleteProduct', [ProductController::class, 'deleteProduct'])->name('admin.deletePro');
+
+
+
+Route::post('/project/store', [ProductController::class, 'store'])->name('project.store');
+Route::post('/project/update', [ProductController::class, 'update'])->name('project.update');
 
 Route::get('createLink', [MeetController::class, 'createLink']);
 Route::get('test', [MeetController::class, 'test']);

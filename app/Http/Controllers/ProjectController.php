@@ -12,9 +12,9 @@ class ProjectController extends Controller
 
     public function add()
     {
-        $items = Projects::get();
 
-        return view('admin.add_pro', compact('items'));
+
+        return view('admin.add_project');
     }
     public function edit($id)
     {

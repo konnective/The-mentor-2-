@@ -177,9 +177,9 @@
             <!-- Sidebar content -->
             <div class="p-4">
                 <!-- Sidebar items -->
-                <a href="{{ route('admin.dash') }}"
+                <a href=""
                     class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('/') ? 'bg-gray-700' : '' }} ">Dashboard</a>
-                <a href="{{ route('admin.pros') }}"
+                <a href=""
                     class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('pros') ? 'bg-gray-700' : '' }}">Products</a>
                 {{-- <a href="{{ route('admin.addPro') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('addPro') ? 'bg-gray-700' : '' }} ">Add

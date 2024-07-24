@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Projects;
 use Google\Service\CloudResourceManager\Project;
+use Google\Service\Dataproc\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session as FacadesSession;
 
 class ProjectController extends Controller
 {
@@ -26,13 +28,18 @@ class ProjectController extends Controller
     }
     public function store(Request $req)
     {
-        $input['title'] = $req->title;
+
+        $input['name'] = $req->name;
+        $input['cycles'] = $req->cycles;
         $input['end_date'] = $req->end_date;
         $input['user_id'] = 1;
+        $input['description'] = $req->description;
+
 
 
         Projects::create($input);
 
+        FacadesSession::flash('message', 'This is a message!');
         return redirect()->back()->with('success', 'project created successfully');
     }
     public function update(Request $req)
@@ -43,7 +50,7 @@ class ProjectController extends Controller
         $input['user_id'] = 1;
 
 
-        Projects::where('id', $projectId)->update($input);
+        // Projects::where('id', $projectId)->update($input);
 
         return redirect()->back()->with('success', 'project updated successfully');
     }

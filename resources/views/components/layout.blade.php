@@ -184,7 +184,7 @@
                 {{-- <a href="{{ route('admin.addPro') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('addPro') ? 'bg-gray-700' : '' }} ">Add
                     Product</a> --}}
-                <a href=""
+                <a href="{{ route('blogs') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('blogs') ? 'bg-gray-700' : '' }}">Blogs
                     Section</a>
 

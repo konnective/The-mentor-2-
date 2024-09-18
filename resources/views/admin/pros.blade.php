@@ -2,7 +2,7 @@
 
     <div class="content-container text-center  px-10  mt-2">
         <header class="text-center">
-            <h2 class="text-2xl font-bold uppercase mb-1">Products</h2>
+            <h2 class="text-2xl font-bold uppercase mb-1">Projects</h2>
             {{-- <p class="mb-4">Edit:</p> --}}
         </header>
 
@@ -15,14 +15,14 @@
 
             <button class="bg-blue-500 float-right text-white py-2 px-4 rounded-md my-4">
                 <a href="{{ route('admin.addPro') }}">
-                    Add Product
+                    Add Project
                 </a>
             </button>
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3">
-                            Product name
+                            Project name
                         </th>
                         <th scope="col" class="px-6 py-3">
                             dropdown

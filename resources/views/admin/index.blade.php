@@ -1,7 +1,7 @@
 <x-layout>
 
     <div class="content-container text-center  px-10  mt-2">
-        <header class="text-center">
+        <header class="text-left">
             <h2 class="text-2xl font-bold uppercase mb-1">Dashboard</h2>
             {{-- <p class="mb-4">Edit:</p> --}}
         </header>

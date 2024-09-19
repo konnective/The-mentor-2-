@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
@@ -86,5 +88,18 @@ class BlogController extends Controller
         Blog::where('id', $id)->delete();
 
         return redirect()->back()->with('success', 'blog deleted successfully');
+    }
+
+    public function up()
+    {
+        Schema::create('leads', function (Blueprint $table) {
+            $table->string('name', 255);
+            $table->double('price', 10, 2);
+            $table->string('subject', 255);
+            $table->string('phone', 20);
+            $table->longText('details');
+        });
+
+        return "done";
     }
 }

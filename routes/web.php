@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\LeadController;
 use App\Http\Controllers\MeetController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
@@ -33,6 +34,14 @@ Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit'
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
 Route::post('/blog/update', [BlogController::class, 'update'])->name('blog.update');
 Route::post('/blog/delete', [BlogController::class, 'delete'])->name('blog.delete');
+
+//leads section
+Route::get('/leads', [LeadController::class, 'index'])->name('leads');
+Route::get('/lead/add', [LeadController::class, 'add'])->name('lead.add');
+Route::get('/lead/edit/{id}', [LeadController::class, 'edit'])->name('lead.edit');
+Route::post('/lead/store', [LeadController::class, 'store'])->name('lead.store');
+Route::post('/lead/update', [LeadController::class, 'update'])->name('lead.update');
+Route::post('/lead/delete', [LeadController::class, 'delete'])->name('lead.delete');
 
 
 Route::get('createLink', [MeetController::class, 'createLink']);

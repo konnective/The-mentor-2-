@@ -156,16 +156,6 @@
                     </form>
                 </li>
             @else
-                <li>
-                    <a href="{{ env('APP_URL') }}/daily_cycles" class="hover:text-laravel">Daily Cycles</a>
-                </li>
-                <li>
-                    <a href="/register" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i> Register</a>
-                </li>
-                <li>
-                    <a href="/login" class="hover:text-laravel"><i class="fa-solid fa-arrow-right-to-bracket"></i>
-                        Login</a>
-                </li>
             @endauth
         </ul>
     </nav>
@@ -186,6 +176,9 @@
                     Product</a> --}}
                 <a href="{{ route('blogs') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('blogs') ? 'bg-gray-700' : '' }}">Blogs
+                    Section</a>
+                <a href="{{ route('leads') }}"
+                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('leads') ? 'bg-gray-700' : '' }}">Leads
                     Section</a>
 
             </div>

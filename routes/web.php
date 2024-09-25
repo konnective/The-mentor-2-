@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CareerController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\LeadController;
@@ -42,6 +43,15 @@ Route::get('/lead/edit/{id}', [LeadController::class, 'edit'])->name('lead.edit'
 Route::post('/lead/store', [LeadController::class, 'store'])->name('lead.store');
 Route::post('/lead/update', [LeadController::class, 'update'])->name('lead.update');
 Route::post('/lead/delete', [LeadController::class, 'delete'])->name('lead.delete');
+
+//career section
+Route::get('/careers', [CareerController::class, 'index'])->name('careers');
+Route::get('/career/add', [CareerController::class, 'add'])->name('career.add');
+Route::get('/career/view/{id}', [CareerController::class, 'view'])->name('career.view');
+Route::get('/career/edit/{id}', [CareerController::class, 'edit'])->name('career.edit');
+Route::post('/career/store', [CareerController::class, 'store'])->name('career.store');
+Route::post('/career/update', [CareerController::class, 'update'])->name('career.update');
+Route::post('/career/delete', [CareerController::class, 'delete'])->name('career.delete');
 
 
 Route::get('createLink', [MeetController::class, 'createLink']);

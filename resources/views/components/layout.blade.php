@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" href="{{ asset('assets/main-logo.png') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
             },
         }
     </script>
-    <title>The Mentor</title>
+    <title>Code Cube Technology</title>
 </head>
 <style>
     body {
@@ -45,10 +45,32 @@
         font-style: normal;
     }
 
+    nav {
+        background-color: #405377;
+    }
+
+    nav .logotxt {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .logotxt1 {
+        color: #f2f2f2
+    }
+
+    .logotxt2 {
+        color: #24c0e9
+    }
+
     .container {
         width: 300px;
         margin: 100px auto 0;
         /*Top: 100px, right-left: auto, bottom:0px*/
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto
     }
 
     .select-option {
@@ -133,8 +155,13 @@
 </style>
 
 <body class="main-body">
-    <nav class="navd z-30 flex justify-between items-center p-6  bg-orange-400">
-        <a href="{{ env('APP_URL') }}"><span class="text-black">The Mentor</span></a>
+    <nav class="navd z-30 flex items-center p-6 ">
+        <div class="logo"><img src="{{ asset('assets/main-logo.png') }}" alt=""></div>
+        <div class="logotxt mx-3">
+            <span class="logotxt1">Code</span>
+            <span class="logotxt2">Cube</span>
+        </div>
+        {{-- <a href="{{ env('APP_URL') }}"><span class="text-black">The Mentor</span></a> --}}
         {{-- <a href="/"><img class="w-24" src="{{ asset('images/logo.png') }}" alt="" class="logo" /></a> --}}
         <ul class="flex space-x-6 mr-6 text-lg">
             @auth
@@ -167,10 +194,9 @@
             <!-- Sidebar content -->
             <div class="p-4">
                 <!-- Sidebar items -->
-                <a href=""
+                <a href="{{ route('admin.dash') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('/') ? 'bg-gray-700' : '' }} ">Dashboard</a>
-                <a href=""
-                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('pros') ? 'bg-gray-700' : '' }}">Products</a>
+
                 {{-- <a href="{{ route('admin.addPro') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('addPro') ? 'bg-gray-700' : '' }} ">Add
                     Product</a> --}}
@@ -179,6 +205,9 @@
                     Section</a>
                 <a href="{{ route('leads') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('leads') ? 'bg-gray-700' : '' }}">Leads
+                    Section</a>
+                <a href="{{ route('careers') }}"
+                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('careers') ? 'bg-gray-700' : '' }}">Career
                     Section</a>
 
             </div>

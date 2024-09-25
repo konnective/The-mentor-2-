@@ -92,12 +92,16 @@ class BlogController extends Controller
 
     public function up()
     {
-        Schema::create('leads', function (Blueprint $table) {
-            $table->string('name', 255);
-            $table->double('price', 10, 2);
-            $table->string('subject', 255);
-            $table->string('phone', 20);
-            $table->longText('details');
+        Schema::create('careers', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 255)->nullable();
+            // $table->double('price', 10, 2)->default(0)->nullable();
+            $table->string('email', 255)->nullable();
+            $table->string('phone', 20)->nullable();
+            $table->string('resume', 20)->nullable();
+            $table->longText('details')->nullable();
+            $table->timestamps();
+            // $table->timestamps()->useCurrent();
         });
 
         return "done";

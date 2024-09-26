@@ -1,0 +1,49 @@
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.login_wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_container {
+    width: 25%;
+    padding: 20px;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .input_login {
+
+    flex: 1;
+    min-width: 40%;
+    margin: 10px 0;
+    padding: 10px;
+
+}
+
+.btn_login {
+    width: 40%;
+    border: none;
+    padding: 15px 20px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn_login:hover {
+    background-color: rgb(33, 54, 54);
+}

@@ -13,7 +13,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [DashboardController::class, 'index'])->name('admin.dash');
+Route::get('/', function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dash');
+})->middleware('auth');
 // Route::get('/pros', [ProductController::class, 'products'])->name('admin.pros');
 // Route::get('/addPro', [ProductController::class, 'addProduct'])->name('admin.addPro');
 // Route::post('/createPro', [ProductController::class, 'createProduct'])->name('admin.createPro');
@@ -22,6 +24,8 @@ Route::get('/', [DashboardController::class, 'index'])->name('admin.dash');
 // Route::post('/updatePro', [ProductController::class, 'updateProduct'])->name('admin.updatePro');
 
 
+Route::get('/login', [DashboardController::class, 'login'])->name('login');
+Route::post('/login_check', [DashboardController::class, 'loginCheck'])->name('login_check');
 
 Route::get('/project/add', [ProjectController::class, 'add'])->name('project.add');
 Route::get('/project/edit/{id}', [ProjectController::class, 'edit'])->name('project.edit');

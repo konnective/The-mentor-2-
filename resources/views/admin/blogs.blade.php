@@ -2,11 +2,11 @@
     <div class="projects_section items-center justify-center m-5">
         <div class="pro-table relative overflow-x-auto shadow-md sm:rounded-lg w-fulld">
 
-            {{-- <button class="bg-blue-500 float-right text-white py-2 px-4 rounded-md my-4">
-                <a href="#">
-                    Add Product
+            <button class="bg-blue-500 float-right text-white py-2 px-4 rounded-md my-4">
+                <a href="{{route('blog.add')}}">
+                    Add Blog
                 </a>
-            </button> --}}
+            </button>
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>

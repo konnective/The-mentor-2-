@@ -65,7 +65,7 @@
         flex-direction: column;
     }
 
-    form .input_login {
+    form input {
 
         flex: 1;
         min-width: 40%;
@@ -93,11 +93,12 @@
 <body class="login_body">
     <div class="login_wrapper">
         <div class="login_container">
-            <h1>Login</h1>
-            <form method="POST" action="{{ route('login_check') }}" enctype="multipart/form-data">
+            <h1>Register</h1>
+            <form method="POST" action="{{ route('registration') }}" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
-                <input type="text" placeholder="username" name="email" />
+                <input type="text" placeholder="name" name="name" />
+                <input type="text" placeholder="username" name="username" />
                 <input type="password" placeholder="password" class="input_login" name="password" />
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -109,7 +110,7 @@
                     </div>
                 @endif
                 <button class="btn_login">
-                    Login
+                    Register
                 </button>
             </form>
         </div>

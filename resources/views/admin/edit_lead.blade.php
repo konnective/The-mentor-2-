@@ -10,7 +10,8 @@
             @csrf
             @method('POST')
             <div class="mb-6">
-
+                <input type="hidden" class="border border-gray-200 rounded p-2 w-full" name="id"
+                    value="{{ $item->id }}" />
 
             </div>
             <div class="input_container flex space-x-4">
@@ -58,8 +59,7 @@
                 <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
                     Edit
                 </button>
-
-                <a href="" class="text-black ml-4"> Back </a>
+                <a href="/dashboard" class="text-black ml-4"> Back </a>
             </div>
         </form>
 

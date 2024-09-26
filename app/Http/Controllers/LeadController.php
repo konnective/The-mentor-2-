@@ -65,8 +65,7 @@ class LeadController extends Controller
         $input['subject'] = $request->subject;
         $input['phone'] = $request->phone;
         $input['details'] = $request->details;
-
-        dd($request);
+        // dd($request);
 
 
         // if ($request->file('file')) {

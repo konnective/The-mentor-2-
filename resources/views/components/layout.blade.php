@@ -174,7 +174,9 @@
                     <form class="inline text-white" method="POST" action="/logout">
                         @csrf
                         <button type="submit">
-                            <i class="fa-solid fa-door-closed"></i> Logout
+                            <a href="{{ route('logout') }}">
+                                <i class="fa-solid fa-door-closed"></i> Logout
+                            </a>
                         </button>
                     </form>
                 </li>

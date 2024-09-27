@@ -14,21 +14,22 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dash');
+    // Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dash');
+
+
+
+
+
 })->middleware('auth');
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dash');
-// Route::get('/pros', [ProductController::class, 'products'])->name('admin.pros');
-// Route::get('/addPro', [ProductController::class, 'addProduct'])->name('admin.addPro');
-// Route::post('/createPro', [ProductController::class, 'createProduct'])->name('admin.createPro');
-// Route::get('/editPro/{id}', [ProductController::class, 'editProduct'])->name('admin.editPro');
-// Route::get('/deletePro/{id}', [ProductController::class, 'deleteProduct'])->name('admin.deletePro');
-// Route::post('/updatePro', [ProductController::class, 'updateProduct'])->name('admin.updatePro');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dash')->middleware('auth');
+
 
 
 Route::get('/login', [DashboardController::class, 'login'])->name('login');
 Route::post('/login_check', [DashboardController::class, 'loginCheck'])->name('login_check');
 Route::get('/register', [DashboardController::class, 'register'])->name('register');
 Route::post('/registration', [DashboardController::class, 'registration'])->name('registration');
+Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
 
 Route::get('/project/add', [ProjectController::class, 'add'])->name('project.add');
 Route::get('/project/edit/{id}', [ProjectController::class, 'edit'])->name('project.edit');
@@ -36,29 +37,29 @@ Route::post('/project/store', [ProjectController::class, 'store'])->name('projec
 Route::post('/project/update', [ProjectController::class, 'update'])->name('project.update');
 
 //blog section
-Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
-Route::get('/blog/add', [BlogController::class, 'add'])->name('blog.add');
-Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
-Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
-Route::post('/blog/update', [BlogController::class, 'update'])->name('blog.update');
-Route::post('/blog/delete', [BlogController::class, 'delete'])->name('blog.delete');
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs')->middleware('auth');
+Route::get('/blog/add', [BlogController::class, 'add'])->name('blog.add')->middleware('auth');
+Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit')->middleware('auth');
+Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store')->middleware('auth');
+Route::post('/blog/update', [BlogController::class, 'update'])->name('blog.update')->middleware('auth');
+Route::post('/blog/delete', [BlogController::class, 'delete'])->name('blog.delete')->middleware('auth');
 
 //leads section
-Route::get('/leads', [LeadController::class, 'index'])->name('leads');
-Route::get('/lead/add', [LeadController::class, 'add'])->name('lead.add');
-Route::get('/lead/edit/{id}', [LeadController::class, 'edit'])->name('lead.edit');
-Route::post('/lead/store', [LeadController::class, 'store'])->name('lead.store');
-Route::post('/lead/update', [LeadController::class, 'update'])->name('lead.update');
-Route::post('/lead/delete', [LeadController::class, 'delete'])->name('lead.delete');
+Route::get('/leads', [LeadController::class, 'index'])->name('leads')->middleware('auth');
+Route::get('/lead/add', [LeadController::class, 'add'])->name('lead.add')->middleware('auth');
+Route::get('/lead/edit/{id}', [LeadController::class, 'edit'])->name('lead.edit')->middleware('auth');
+Route::post('/lead/store', [LeadController::class, 'store'])->name('lead.store')->middleware('auth');
+Route::post('/lead/update', [LeadController::class, 'update'])->name('lead.update')->middleware('auth');
+Route::post('/lead/delete', [LeadController::class, 'delete'])->name('lead.delete')->middleware('auth');
 
 //career section
-Route::get('/careers', [CareerController::class, 'index'])->name('careers');
-Route::get('/career/add', [CareerController::class, 'add'])->name('career.add');
-Route::get('/career/view/{id}', [CareerController::class, 'view'])->name('career.view');
-Route::get('/career/edit/{id}', [CareerController::class, 'edit'])->name('career.edit');
-Route::post('/career/store', [CareerController::class, 'store'])->name('career.store');
-Route::post('/career/update', [CareerController::class, 'update'])->name('career.update');
-Route::post('/career/delete', [CareerController::class, 'delete'])->name('career.delete');
+Route::get('/careers', [CareerController::class, 'index'])->name('careers')->middleware('auth');
+Route::get('/career/add', [CareerController::class, 'add'])->name('career.add')->middleware('auth');
+Route::get('/career/view/{id}', [CareerController::class, 'view'])->name('career.view')->middleware('auth');
+Route::get('/career/edit/{id}', [CareerController::class, 'edit'])->name('career.edit')->middleware('auth');
+Route::post('/career/store', [CareerController::class, 'store'])->name('career.store')->middleware('auth');
+Route::post('/career/update', [CareerController::class, 'update'])->name('career.update')->middleware('auth');
+Route::post('/career/delete', [CareerController::class, 'delete'])->name('career.delete')->middleware('auth');
 
 
 Route::get('createLink', [MeetController::class, 'createLink']);

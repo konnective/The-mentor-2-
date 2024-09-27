@@ -25,13 +25,15 @@ class DashboardController extends Controller
         ]);
         if (Auth::attempt($creds)) {
             return view('admin.index');
+        } else {
+
+            return redirect('/login')->withErrors(['message' => 'invalid creds']);
         }
     }
     public function register(Request $req)
     {
 
         return view('admin.register');
-
     }
     public function registration(Request $req)
     {
@@ -48,9 +50,12 @@ class DashboardController extends Controller
 
 
         User::create($input);
-        return redirect()->route('admin.dash');
-        
-
+        return redirect()->route('login');
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/login');
     }
     public function index()
     {

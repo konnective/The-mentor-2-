@@ -42,10 +42,11 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         $input['title'] = $request->title;
-        $input['description'] = $request->description;
+        $input['details'] = $request->description || ' ';
         $input['user_id'] = $request->user_id;
-        $input['topic'] = $request->topic;
+        $input['topic'] = $request->topic || 1;
 
+        // dd($request);
 
         if ($request->file('file')) {
             $file = $request->file('file');

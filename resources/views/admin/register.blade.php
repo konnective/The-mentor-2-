@@ -56,8 +56,9 @@
         padding: 20px;
         background-color: white;
     }
-    h1{
-        padding:10px 0px;
+
+    h1 {
+        padding: 10px 0px;
     }
 
     form {
@@ -98,7 +99,7 @@
                 @csrf
                 @method('POST')
                 <input type="text" placeholder="name" name="name" />
-                <input type="text" placeholder="username" name="username" />
+                <input type="text" placeholder="email" name="username" />
                 <input type="password" placeholder="password" class="input_login" name="password" />
                 @if ($errors->any())
                     <div class="alert alert-danger">

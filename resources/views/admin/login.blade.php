@@ -56,8 +56,9 @@
         padding: 20px;
         background-color: white;
     }
-    h1{
-        padding:10px 0px;
+
+    h1 {
+        padding: 10px 0px;
     }
 
     form {
@@ -97,7 +98,7 @@
             <form method="POST" action="{{ route('login_check') }}" enctype="multipart/form-data">
                 @csrf
                 @method('POST')
-                <input type="text" placeholder="username" name="email" />
+                <input type="text" placeholder="email" name="email" />
                 <input type="password" placeholder="password" class="input_login" name="password" />
                 @if ($errors->any())
                     <div class="alert alert-danger">

@@ -45,6 +45,8 @@
         font-style: normal;
     }
 
+
+
     nav {
         background-color: #405377;
     }
@@ -163,7 +165,7 @@
         </div>
         {{-- <a href="{{ env('APP_URL') }}"><span class="text-black">The Mentor</span></a> --}}
         {{-- <a href="/"><img class="w-24" src="{{ asset('images/logo.png') }}" alt="" class="logo" /></a> --}}
-        <ul class="flex space-x-6 mr-6 text-lg">
+        <ul class="flex space-x-6 mr-6 text-lg justify-end">
             @auth
                 <li>
                     <span class="font-bold uppercase">
@@ -193,19 +195,23 @@
             <div class="p-4">
                 <!-- Sidebar items -->
                 <a href="{{ route('admin.dash') }}"
-                    class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('/') ? 'bg-gray-700' : '' }} ">Dashboard</a>
+                    class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('/') ? 'bg-gray-700' : '' }} "><i
+                        class="fa-solid fa-chart-line"></i> Dashboard</a>
 
                 {{-- <a href="{{ route('admin.addPro') }}"
                     class="block text-center py-2 px-4 hover:bg-gray-700 {{ Request::is('addPro') ? 'bg-gray-700' : '' }} ">Add
                     Product</a> --}}
                 <a href="{{ route('blogs') }}"
-                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('blogs') ? 'bg-gray-700' : '' }}">Blogs
+                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('blogs') ? 'bg-gray-700' : '' }}"><i
+                        class="fa-brands fa-blogger-b"></i> Blogs
                     Section</a>
                 <a href="{{ route('leads') }}"
-                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('leads') ? 'bg-gray-700' : '' }}">Leads
+                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('leads') ? 'bg-gray-700' : '' }}"><i
+                        class="fa-solid fa-headset"></i> Leads
                     Section</a>
                 <a href="{{ route('careers') }}"
-                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('careers') ? 'bg-gray-700' : '' }}">Career
+                    class="block text-center py-2 px-4 hover:bg-gray-700  {{ Request::is('careers') ? 'bg-gray-700' : '' }}"><i
+                        class="fa-solid fa-briefcase"></i> Career
                     Section</a>
 
             </div>

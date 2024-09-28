@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ContactApiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductController;
@@ -12,3 +13,12 @@ Route::get('/user', function (Request $request) {
 
 Route::get('products', [ProductController::class, 'getProducts']);
 Route::get('create', [BlogController::class, 'up']);
+
+//api
+Route::post('newsletter', [ContactApiController::class, 'newsletter']);
+Route::post('contact', [ContactApiController::class, 'contact']);
+
+Route::post('/view', [function () {
+    $res = ["sucess" => true];
+    return response()->json($res);
+}]);
